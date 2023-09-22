@@ -209,7 +209,7 @@ const collapseItems = [
         item: [
           {
             value: 'Alta de obra',
-            route: ''//'alta-obra'
+            route: 'alta-obra'
           },
           {
             value: 'Presupuesto de obra',
