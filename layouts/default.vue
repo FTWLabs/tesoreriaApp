@@ -71,18 +71,6 @@
           <n-collapse default-expanded-names="1" accordion
           :theme-overrides="collapseThemeOverrides"
           >
-          <!--
-            <template #header-extra>
-              <NuxtLink to="/">
-                Holas
-              </NuxtLink>
-            </template>
-            <template #arrow>
-              <n-icon>
-                <cash-icon />
-              </n-icon>
-            </template>
-          -->
             <n-collapse-item
             v-for="collapseItem in collapseItems"
             class="collapse-title"
@@ -99,7 +87,7 @@
                 }"
                 >
                   <n-icon
-                  size="1.5em">
+                  size="1.2em">
                     <component
                     :is="subTitle.icon"
                     />
@@ -296,11 +284,6 @@ const collapseItems = [
 </script>
   
 <style>
-div.collapse-main-menu {
-  padding: 10px 0;
-  transition: .5s ease;
-}
-
 .n-layout.sidebar {
   padding: 20px 0;
   width: 350px;
@@ -308,7 +291,6 @@ div.collapse-main-menu {
   position: fixed;
   transition: 200ms ease-out;
   z-index: 100;
-  overflow-y: auto;
 }
 
 div.content-sidebar {
@@ -324,7 +306,11 @@ div.header-sidebar{
   margin-right: 2.3em;
 }
 div.home-link{
-  margin: 0 0 0 37px;
+  margin: 1rem 0 1rem 37px;
+}
+div.collapse-main-menu {
+  padding: 10px 0;
+  transition: .5s ease;
 }
 ul.in-sidebar{
   padding: 6px 1em;
@@ -336,27 +322,27 @@ ul.in-sidebar{
   }
 }
 
-.n-layout.sidebar::-webkit-scrollbar {
+.n-layout.sidebar > .n-layout-scroll-container::-webkit-scrollbar {
     display: block;
     width: 8px;
 }
-.n-layout.sidebar::-webkit-scrollbar-track {
+.n-layout.sidebar > .n-layout-scroll-container::-webkit-scrollbar-track {
     background: #f7f7f7;
     box-shadow: inset 0 0 4px #a3a3a3;
     border-radius: 5px;
     margin-bottom: .2em;
 }
     
-.n-layout.sidebar::-webkit-scrollbar-thumb {
+.n-layout.sidebar > .n-layout-scroll-container::-webkit-scrollbar-thumb {
     background-color: #919191;
     border-radius: 5px;
 }
 
-.n-layout.sidebar::-webkit-scrollbar-track-piece:end {
+.n-layout.sidebar > .n-layout-scroll-container::-webkit-scrollbar-track-piece:end {
     background: transparent;
 }
 
-.n-layout.sidebar::-webkit-scrollbar-track-piece:start {
+.n-layout.sidebar > .n-layout-scroll-container::-webkit-scrollbar-track-piece:start {
     background: transparent;
 }
 </style>
